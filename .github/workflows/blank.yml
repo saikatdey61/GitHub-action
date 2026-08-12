@@ -12,3 +12,9 @@ jobs:
         run: cat index.html
       - name: printing env
         run: echo "$ENVIRONMENT_VAR"
+      - name: Show GitHub information
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Commit: ${{ github.sha }}"
