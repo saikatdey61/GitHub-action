@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build-steps
-        run: echo "A demo build"
+        run: echo "Hello ${{vars.My_Name}}"
 
   test:
     runs-on: ubuntu-latest
