@@ -1,24 +1,10 @@
-name: GitHub Action
-on: 
-  push:
-    branches:
-      - main
-
-  pull_request:
-    branches:
-      - main
+name: Github Action Demo
+on: push 
 jobs:
-  build:
+  action-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: build-steps
-        run: |
-          echo "Hello ${{vars.My_Name}}"
-          echo "Secret ${{secrets.MY_PASSWORD}}"
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: tests-steps
-        run: echo "A demo test"
-
+      - name: checkout the code
+        uses: actions/checkout@v5
+      - name: run index.html file
+        run: cat index.html
