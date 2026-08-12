@@ -2,11 +2,11 @@ name: GitHub Action
 on: 
   push:
     branches:
-      -main
+      - main
 
   pull_request:
     branches:
-      -main
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
