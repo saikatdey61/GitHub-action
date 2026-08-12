@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build-steps
-        run: echo "Hello ${{vars.My_Name}}"
+        run: |
+          echo "Hello ${{vars.My_Name}}"
+          echo "Secret ${{secrets.MY_PASSWORD}}"
 
   test:
     runs-on: ubuntu-latest
