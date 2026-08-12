@@ -17,4 +17,11 @@ jobs:
           echo "Repository: ${{ github.repository }}"
           echo "Actor: ${{ github.actor }}"
           echo "Branch: ${{ github.ref }}"
-          echo "Commit: ${{ github.sha }}"
+          echo "Commit: ${{ github.sha }}
+
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: production-deployment
+        if: github.actor == 'saikatdey61'
+        run: echo "Deployment production"
