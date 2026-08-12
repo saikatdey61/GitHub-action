@@ -1,5 +1,7 @@
 name: Github Action Demo
 on: push 
+env:
+  ENVIRONMENT_VAR : Saikat_D
 jobs:
   action-demo:
     runs-on: ubuntu-latest
@@ -8,3 +10,5 @@ jobs:
         uses: actions/checkout@v5
       - name: run index.html file
         run: cat index.html
+      - name: printing env
+        run: echo "$ENVIRONMENT_VAR"
